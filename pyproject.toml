@@ -1,0 +1,27 @@
+[project]
+name = "co-scientist"
+version = "0.1.0"
+description = "Multi-agent research co-scientist: arXiv-grounded, critic-in-the-loop answers with verified citations, on local models"
+readme = "README.md"
+authors = [
+    { name = "ashishpatel26", email = "shriganesh.patel@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "agno>=3.2.1",
+    "chromadb>=1.5.9",
+    "fastapi>=0.164.0",
+    "httpx>=0.28.1",
+    "ollama>=0.6.3",
+    "openai>=3.55.0",
+    "pydantic-settings>=2.16.3",
+    "pypdf>=7.1.1",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+co-scientist = "co_scientist:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
